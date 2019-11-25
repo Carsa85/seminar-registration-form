@@ -1,0 +1,154 @@
+html,
+body {
+    background-color: #292929;
+    font-family: Verdana, Geneva, sans-serif
+}
+
+#page-wrap {
+    width: fit-content;
+    margin: auto;
+}
+
+#page-wrap > h1 {
+    color: #fff;
+    font-size: 3.8rem;
+}
+
+#page-wrap h1 > span {
+    color: #03a9f4;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+form #step_1 {
+    background-color: #b0fdb0;
+}
+
+form #step_1 #attendee_container div.show {
+    display: block;
+}
+
+#step1_result:before,
+#step2_result:before {
+    content: "\2713 ";
+    color: #2db901;
+    font-size: 5rem;
+    padding: 0px 12px;
+    border-radius: 50%;
+    margin: auto;
+    background: #baf17c;
+    border: 1px outset #ffffffb0;
+}
+
+#step1_result,
+#step2_result {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    max-height: 0px;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
+}
+
+#step1_result.completed,
+#step2_result.completed {
+    max-height: 100px;
+    transition: max-height 0.35s ease-in;
+}
+
+#attendee_container {
+    max-height: 0px;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
+}
+
+#attendee_container > div {
+    margin: 10px 0px;
+}
+
+#attendee_container.loaded {
+    max-height: 500px;
+    transition: max-height 0.35s ease-in;
+}
+
+form #step_1 #num_attendees {
+    margin-bottom: 10px;
+}
+
+form #step_1 #attendee_container div.hide {
+    display: none;
+}
+
+form #step_2 {
+    background-color: #c3eeff;
+}
+
+form #step_2 #company_name_wrap {
+    max-height: 0px;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
+}
+
+form #step_2 #company_name_wrap.active {
+    max-height: 500px;
+    transition: max-height 0.35s ease-in;
+}
+
+form #step_2 #special_accommodations_wrap {
+    max-height: 0px;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
+}
+
+form #step_2 #special_accommodations_wrap.active {
+    max-height: 500px;
+    transition: max-height 0.35s ease-in;
+}
+
+form #step_3 {
+    background-color: #ffaeae;
+}
+
+form #step_3 #submit_button {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+form #step_3:disabled,
+form #step_2:disabled {
+    opacity: 0.5;
+}
+
+form fieldset {
+    border: 0px;
+    margin: 10px;
+}
+
+form fieldset > legend {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form fieldset label,
+form fieldset p {
+    font-style: italic;
+}
+
+form fieldset > label {
+    font-size: 1.5rem;
+}
+
+form fieldset p {
+    font-size: 1.5rem;
+}
